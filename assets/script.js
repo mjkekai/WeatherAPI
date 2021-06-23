@@ -27,7 +27,8 @@ $( document ).ready(() => {
                 <div class="card-body">
                 <h5 class="card-title">
                     ${data.name} (${new Date().toLocaleDateString()})
-                    <img src="http://openweathermap.org/img/${data.weather[0].icon}/10d@2x.png"/>
+                  <div>  <img src="http://openweathermap.org/img/wn/01d@2x.png"/>
+                  </div>
                 </h5>
                 <p class="card-text">Temp: ${data.main.temp}</p>
                 <p class="card-text">Humidity: ${data.main.humidity}</p>
@@ -48,6 +49,7 @@ $( document ).ready(() => {
             let template = "";
 
             const filteredData = data.list.filter((datum) => datum.dt_txt.includes("12:00:00"));
+
             
             filteredData.forEach((datum) => {
                 template += `
@@ -55,7 +57,7 @@ $( document ).ready(() => {
                         <div class="card-body">
                         <h5 class="card-title">
                             ${datum.dt_txt}
-                            <img src="http://openweathermap.org/img/${datum.weather[0].icon}/10d@2x.png"/>
+                            <img src="http://openweathermap.org/img/wn/01d@2x.png"/>
                         </h5>
                         <p class="card-text">Temp: ${datum.main.temp}</p>
                         <p class="card-text">Humidity: ${datum.main.humidity}</p>

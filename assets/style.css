@@ -1,0 +1,28 @@
+* {
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: center;
+  background: blue;
+  font-size: 50px;
+  color: whitesmoke;
+}
+
+.form-container {
+  padding: auto;
+}
+
+#current {
+  justify-content: center;
+}
+
+#forecast {
+  justify-content: center, flex-end;
+}
